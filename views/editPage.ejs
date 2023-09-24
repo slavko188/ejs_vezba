@@ -1,0 +1,56 @@
+<%- include('partials/top.ejs') %> <%- include('partials/navbar.ejs')%>
+
+<div class="p-5 text-center">
+  <h1>Edit account</h1>
+</div>
+<div class="row">
+  <div class="col-6 offset-3">
+    <form action="/update" method="post">
+      <input
+        class="form-control mb-3"
+        type="hidden"
+        placeholder="ID"
+        name="id"
+        value="<%= foundAccount.id %>"
+      />
+      <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="firstName"
+        name="firstName"
+        value="<%= foundAccount.firstName %>"
+      />
+      <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="lastName"
+        name="lastName"
+        value="<%= foundAccount.lastName %>"
+      />
+      <input
+        class="form-control mb-3"
+        type="email"
+        placeholder="email"
+        name="email"
+        value="<%= foundAccount.email %>"
+      />
+      <input
+        class="form-control mb-3"
+        type="number"
+        placeholder="Deposit"
+        name="deposit"
+        value="<%= foundAccount.deposit %>"
+      />
+      <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="Card"
+        name="card"
+        value="<%= foundAccount.card %>"
+      />
+
+      <button class="btn btn-primary form-control">Update</button>
+    </form>
+  </div>
+</div>
+<%- include('partials/bottom.ejs') %>

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "",
+    "firstName": "Slavko",
+    "lastName": "Roganovic",
+    "email": "slavkoroganovic234@gmail.com",
+    "deposit": "234000",
+    "card": "visa"
+  },
+  {
+    "id": "",
+    "firstName": "Zdravko",
+    "lastName": "Zdravkovic",
+    "email": "zdravko@gmail.com",
+    "deposit": "2340",
+    "card": "visa"
+  }
+]

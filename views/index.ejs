@@ -1,0 +1,40 @@
+<%- include('partials/top.ejs') %>
+<%- include('partials/navbar.ejs') %>
+
+
+
+
+<div class="p-5 text-center">
+  <h1>Accounts</h1>
+</div>
+<div class="row">
+  <div class="col-6 offset-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>first name</th>
+          <th>last name</th>
+          <th>Email</th>
+          <th>Deposit</th>w
+          <th>Card</th>
+        </tr>
+      </thead>
+      <tbody>
+         <% for(let i = 0; i < accounts.length; i++){ %>
+        <tr>
+          <td><%= accounts[i].id %></td> 
+          <td><%= accounts[i].firstName %></td>
+          <td><%= accounts[i].lastName %></td>
+          <td><%= accounts[i].email %></td>
+          <td><%= accounts[i].deposit %></td>
+          <td><%= accounts[i].card %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+
+<%- include('partials/bottom.ejs') %>
