@@ -28,7 +28,7 @@ const updateAccount = (req, res) => {
   AccountModel.updateOne({ _id: id }, { $set: account })
     .then((result) => {
       console.log(result);
-      res.redirect("/edit");
+      res.redirect("/editDelete");
     })
     .catch((err) => {
       console.log(err);
