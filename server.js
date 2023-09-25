@@ -1,7 +1,8 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const PORT = 3000;
+//Q2ovm5fJXerbacjZ
 
 app.set("view engine", "ejs");
 app.use(express.json());
@@ -9,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/node_modules/bootstrap/dist/css"));
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/accounts")
+  .connect(process.env.MONGODB_URL)
   .then(() => {
     console.log("MongoDB connected");
   })
@@ -18,6 +19,6 @@ mongoose
   });
 app.use(require("./routes"));
 
-app.listen(PORT, () => {
-  console.log(`Slusam na portu ${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Slusam na portu 3000`);
 });
